@@ -1,0 +1,294 @@
+column:1 of km's sentiabout to be searched  
+The Search Parameters, index:1 and file name:inbox    
+Current active file:inbox.txt    
+Tester file:inbox.txt    
+Since tester and active are equal ,will stop here       
+km found and current count:0         
+km found and current count:1         
+Now reached count no:1 which is located at 1 of inbox.txt       
+column:0 of km's sentiabout to be searched  
+The Search Parameters, index:1 and file name:inbox    
+Current active file:inbox.txt    
+Tester file:inbox.txt    
+Since tester and active are equal ,will stop here       
+km found and current count:0         
+Now reached count no:0 which is located at 0 of inbox.txt       
+column:0 of km's sentiabout to be searched  
+The Search Parameters, index:1 and file name:inbox    
+Current active file:inbox.txt    
+Tester file:inbox.txt    
+Since tester and active are equal ,will stop here       
+km found and current count:0         
+Now reached count no:0 which is located at 0 of inbox.txt       
+column:0 of random_stranger2's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox.txt    
+Tester file:inbox.txt    
+Since tester and active are equal ,will stop here       
+random_stranger2 found and current count:0         
+Now reached count no:0 which is located at 2 of inbox.txt       
+column:0 of random_stranger2's sentiabout to be searched  
+The Search Parameters, index:1 and file name:inbox    
+Current active file:inbox.txt    
+Tester file:inbox.txt    
+Since tester and active are equal ,will stop here       
+random_stranger2 found and current count:0         
+Now reached count no:0 which is located at 1 of inbox.txt       
+column:1 of random_stranger2's sentiabout to be searched  
+The Search Parameters, index:1 and file name:inbox    
+Current active file:inbox.txt    
+Tester file:inbox.txt    
+Since tester and active are equal ,will stop here       
+random_stranger2 found and current count:0         
+random_stranger2 found and current count:1         
+Now reached count no:1 which is located at 2 of inbox.txt       
+column:1 of random_stranger2's sentiabout to be searched  
+The Search Parameters, index:1 and file name:inbox    
+Current active file:inbox.txt    
+Tester file:inbox.txt    
+Since tester and active are equal ,will stop here       
+random_stranger2 found and current count:0         
+random_stranger2 found and current count:1         
+Now reached count no:1 which is located at 2 of inbox.txt       
+column:0 of random_stranger2's sentiabout to be searched  
+The Search Parameters, index:1 and file name:inbox    
+Current active file:inbox.txt    
+Tester file:inbox.txt    
+Since tester and active are equal ,will stop here       
+random_stranger2 found and current count:0         
+Now reached count no:0 which is located at 1 of inbox.txt       
+column:0 of random_stranger2's sentiabout to be searched  
+The Search Parameters, index:1 and file name:inbox    
+Current active file:inbox.txt    
+Tester file:inbox.txt    
+Since tester and active are equal ,will stop here       
+random_stranger2 found and current count:0         
+Now reached count no:0 which is located at 1 of inbox.txt       
+column:0 of random_stranger's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox.txt    
+Tester file:inbox.txt    
+Since tester and active are equal ,will stop here       
+random_stranger found and current count:0         
+Now reached count no:0 which is located at 1 of inbox.txt       
+column:0 of km's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox.txt    
+Tester file:inbox.txt    
+Since tester and active are equal ,will stop here       
+km found and current count:0         
+Now reached count no:0 which is located at 1 of inbox.txt       
+column:0 of km's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox.txt    
+Tester file:inbox.txt    
+Since tester and active are equal ,will stop here       
+km found and current count:0         
+Now reached count no:0 which is located at 1 of inbox.txt       
+column:0 of km's sentiabout to be searched  
+The Search Parameters, index:1 and file name:inbox    
+Current active file:inbox.txt    
+Tester file:inbox.txt    
+Since tester and active are equal ,will stop here       
+km found and current count:0         
+Now reached count no:0 which is located at 0 of inbox.txt       
+column:0 of km's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox.txt    
+Tester file:inbox.txt    
+Since tester and active are equal ,will stop here       
+km found and current count:0         
+Now reached count no:0 which is located at 1 of inbox.txt       
+column:1 of km's sentiabout to be searched  
+The Search Parameters, index:1 and file name:inbox    
+Current active file:inbox.txt    
+Tester file:inbox.txt    
+Since tester and active are equal ,will stop here       
+km found and current count:0         
+km found and current count:1         
+Now reached count no:1 which is located at 2 of inbox.txt       
+column:0 of random_stranger's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox.txt    
+Tester file:inbox.txt    
+Since tester and active are equal ,will stop here       
+random_stranger found and current count:0         
+Now reached count no:0 which is located at 3 of inbox.txt       
+column:2 of km's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox.txt    
+Tester file:inbox.txt    
+Since tester and active are equal ,will stop here       
+km found and current count:0         
+km found and current count:1         
+km found and current count:2         
+Now reached count no:2 which is located at 4 of inbox.txt       
+column:0 of test_user's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+test_user found and current count:0         
+Now reached count no:0 which is located at 0 of inbox1.txt       
+column:1 of test_user's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+test_user found and current count:0         
+test_user found and current count:1         
+Now reached count no:1 which is located at 1 of inbox1.txt       
+column:0 of test_user's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+test_user found and current count:0         
+Now reached count no:0 which is located at 0 of inbox1.txt       
+column:0 of test_user's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+test_user found and current count:0         
+Now reached count no:0 which is located at 0 of inbox1.txt       
+column:0 of test_user's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+test_user found and current count:0         
+Now reached count no:0 which is located at 0 of inbox1.txt       
+column:1 of test_user's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+test_user found and current count:0         
+test_user found and current count:1         
+Now reached count no:1 which is located at 1 of inbox1.txt       
+column:1 of test_user's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+test_user found and current count:0         
+test_user found and current count:1         
+Now reached count no:1 which is located at 1 of inbox1.txt       
+column:0 of datamanager's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+datamanager found and current count:0         
+Now reached count no:0 which is located at 2 of inbox1.txt       
+column:0 of datamanager's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+datamanager found and current count:0         
+Now reached count no:0 which is located at 2 of inbox1.txt       
+column:0 of datamanager's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+datamanager found and current count:0         
+Now reached count no:0 which is located at 2 of inbox1.txt       
+column:0 of datamanager's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+datamanager found and current count:0         
+Now reached count no:0 which is located at 2 of inbox1.txt       
+column:0 of datamanager's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+datamanager found and current count:0         
+Now reached count no:0 which is located at 2 of inbox1.txt       
+column:0 of datamanager's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+datamanager found and current count:0         
+Now reached count no:0 which is located at 2 of inbox1.txt       
+column:0 of datamanager's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+datamanager found and current count:0         
+Now reached count no:0 which is located at 2 of inbox1.txt       
+column:0 of datamanager's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+datamanager found and current count:0         
+Now reached count no:0 which is located at 2 of inbox1.txt       
+column:0 of datamanager's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+datamanager found and current count:0         
+Now reached count no:0 which is located at 2 of inbox1.txt       
+column:0 of datamanager's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+datamanager found and current count:0         
+Now reached count no:0 which is located at 2 of inbox1.txt       
+column:0 of datamanager's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+datamanager found and current count:0         
+Now reached count no:0 which is located at 2 of inbox1.txt       
+column:0 of random_stranger's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+random_stranger found and current count:0         
+Now reached count no:0 which is located at 3 of inbox.txt       
+column:0 of test_user's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+test_user found and current count:0         
+Now reached count no:0 which is located at 0 of inbox1.txt       
+column:0 of test_user's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+Tester file:inbox1.txt    
+Since tester and active are equal ,will stop here       
+test_user found and current count:0         
+Now reached count no:0 which is located at 0 of inbox1.txt       

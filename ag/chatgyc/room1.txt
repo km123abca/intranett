@@ -1,0 +1,5 @@
+1524025780<!@!>ITS: Hello there
+1524025799<!@!>ITS: You can see all logged in users in the right pane
+1525248956<!@!>ITS: The messages you type can be viewed by everyone
+1525248992<!@!>ITS: Type a message in the message box below and press send
+1525249025<!@!>ITS: If you want only specific people to view what you type then click on their names on the right pane

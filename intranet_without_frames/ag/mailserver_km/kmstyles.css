@@ -1,0 +1,138 @@
+.bdjune29
+	{
+	background-color:#e8e5b2;/*#8e8e6c;*/
+	
+	height:82%;
+	position:relative;
+	float:left;
+	}
+.cb
+{
+	float:right;
+}
+
+
+@media(min-width:1500px) 
+	{
+		.bdjune29
+		{
+		width:79%;	
+		}
+	}
+
+@media(min-width:1400px) and (max-width:1499px)
+	{
+		.bdjune29
+		{
+		width:78%;	
+		}
+	}
+
+@media(min-width:1300px) and (max-width:1399px)
+	{
+		.bdjune29
+		{
+		width:76%;	
+		}
+	}
+@media(min-width:1200px) and (max-width:1299px)
+	{
+		.bdjune29
+		{
+		width:75%;	
+		}
+	}
+
+	@media(min-width:1100px) and (max-width:1199px)
+	{
+		.bdjune29
+		{
+		width:70%;	
+		}
+	}
+
+	@media(min-width:1000px) and (max-width:1099px)
+	{
+		.bdjune29
+		{
+		width:60%;	
+		}
+	}
+
+	@media(min-width:900px) and (max-width:999px)
+	{
+		.bdjune29
+		{
+		width:56%;	
+		}
+	}
+
+	@media(min-width:800px) and (max-width:899px)
+	{
+		.bdjune29
+		{
+		width:52%;	
+		}
+	}
+
+	@media(min-width:700px) and (max-width:799px)
+	{
+		.bdjune29
+		{
+		width:50%;	
+		}
+	}
+
+	@media(min-width:600px) and (max-width:699px)
+	{
+		.bdjune29
+		{
+		width:48%;	
+		}
+	}
+
+	@media(min-width:500px) and (max-width:599px)
+	{
+		.bdjune29
+		{
+		width:40%;	
+		}
+	}
+
+.titlez
+	{
+		width:100%;
+		text-align:center;
+		color :#afaf9e;
+	}
+	
+							table#t01 
+							{
+    						width: 100%; 
+    						background-color: #f1f1c1;
+							}
+							table#sen
+							{
+							width:25%;
+							}
+							table#t01 #sub
+							{
+							width:75%;
+							}
+							th
+							{
+							text-align: left;
+							}
+							table#t01 tr:nth-child(even) 
+							{
+    						background-color: #eee;
+							}
+							table#t01 tr:nth-child(odd) 
+							{
+    						background-color: #fff;
+							}
+							table#t01 th 
+							{
+    						color: white;
+    						background-color: black;
+							}

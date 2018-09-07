@@ -1,0 +1,3 @@
+test_user#v#admn_gssa#v#pdf to upload#v#Sir, Kindly upload the attached deputation Notice to our website. #v#http://10.53.214.109:8012/mailserver_km/uploads/deputation_notice_44.pdf#v#read
+test_user#v#admn_gssa#v#gradation list#v#Sir,  zhinyatPFA the gradation list for the year 2018 #v#http://10.53.214.109:8012/mailserver_km/uploads/Gradation List -01_03_2018.pdf#v#read
+datamanager#v#admn_gssa#v#hello#v#Sir,zhinyatThis is a Test mail from admn#v##v#read
