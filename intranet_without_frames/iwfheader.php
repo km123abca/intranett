@@ -301,7 +301,7 @@ body
   <button class="dropbtn"> Misc</button>
   <div class="dropdown-content">
 
-    <button type="button"  class="ddbutton" onclick="load_pagez('chat')">
+    <button type="button"  class="ddbutton" onclick="load_pageznorm('../chatgyc/')">
     Chat with colleagues
     </button>
 
