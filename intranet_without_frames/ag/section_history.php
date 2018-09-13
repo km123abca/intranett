@@ -149,7 +149,8 @@ $query="select
 				to_char(a.ps_frm_dt,'dd/mm/yyyy') ps_frm_dt,
 				a.ps_to_dt,
 				nvl(a.sctn,sctn.dmn_dscrptn) sctn,
-				(nvl(a.ps_to_dt,sysdate) -greatest(nvl(a.ps_frm_dt,nvl(a.ps_to_dt,sysdate)),to_date('$pd','dd/mm/yyyy'))) dayz,
+
+				(nvl(a.ps_to_dt,decode(a.ps_frm_dt,maxd,sysdate,a.ps_frm_dt)) -greatest(ps_frm_dt,to_date('$pd','dd/mm/yyyy'))) dayz,
 				case 		
 						when nvl(sctn.dmn_shrt_nm,'fl')='fl' and a.sctn is null then 'fl'
 						when nvl(sctn.dmn_shrt_nm,'fl')<>'fl' then 'hq'
@@ -162,10 +163,12 @@ $query="select
 				end     aao
 		from 
 				sctn_hstry_dummy a,
+				(select ps_idn mxid,max(ps_frm_dt) maxd from sctn_hstry_dummy group by ps_idn) mx,
 				prsnl_infrmtn_systm b,
 				estt_dmn_mstr sctn 
-		where replace(a.ps_nm,' ','') ='$name2search_ns' and a.ps_idn=b.ps_idn and sctn.dmn_id(+)=a.ps_sctn_id
-		";
+		where replace(a.ps_nm,' ','') ='$name2search_ns' and a.ps_idn=b.ps_idn and sctn.dmn_id(+)=a.ps_sctn_id and mxid=b.ps_idn
+		and   a.ps_frm_dt is not null
+		order by a.ps_frm_dt";
 $statemen=oci_parse($conn,$query);
 oci_execute($statemen);
 $results=array();
