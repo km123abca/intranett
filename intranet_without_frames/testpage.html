@@ -160,43 +160,43 @@ table#stab
  <table id='stab'>
 
  <tr  style="max-height: 400px;">
- <td colspan=3 >
+ <td colspan=3 style='width:75%'>
 <div class="slideshow-container">
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 6</div>
   <img src="001.jpg" class='imgg'>
-  <div class="text">O/o AG (GSSA), Kerala</div>
+  <div class="text">O/o Accountants General , Kerala</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 6</div>
   <img src="002.jpg" class='imgg'>
-  <div class="text">O/o AG (GSSA), Kerala</div>
+  <div class="text">O/o Accountants General , Kerala</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 6</div>
   <img src="003.jpg" class='imgg'>
-  <div class="text">O/o AG (GSSA), Kerala</div>
+  <div class="text">O/o Accountants General , Kerala</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">4 / 6</div>
   <img src="004.jpg" class='imgg'>
-  <div class="text">O/o AG (GSSA), Kerala</div>
+  <div class="text">O/o Accountants General , Kerala</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">5 / 6</div>
   <img src="005.jpg" class='imgg'>
-  <div class="text">O/o AG (GSSA), Kerala</div>
+  <div class="text">O/o Accountants General , Kerala</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">6 / 6</div>
   <img src="006.jpg" class='imgg'>
-  <div class="text">O/o AG (GSSA), Kerala</div>
+  <div class="text">O/o Accountants General , Kerala</div>
 </div>
 
 
@@ -237,41 +237,47 @@ function showSlides() {
 </script>
  </td> 
 
- <td  >
+ <td  style='width:25%'>
  <div class="slideshow-container">
 
-<div class="mySlides1 fade">
-  <div class="numbertext">1 / 6</div>
-  <img src="aganand.jpg" class='imgg'>
-  <div class="text">AG, ERSA</div>
+ <div class="mySlides1 fade">
+  <div class="numbertext">1 / 7</div>
+  <img src="ag/photo_cag/9023.jpg" class='imgg'>
+  <div class="text">The Accountant General, GSSA</div>
 </div>
 
 <div class="mySlides1 fade">
-  <div class="numbertext">2 / 6</div>
+  <div class="numbertext">2 / 7</div>
+  <img src="aganand.jpg" class='imgg'>
+  <div class="text">The Accountant General, ERSA</div>
+</div>
+
+<div class="mySlides1 fade">
+  <div class="numbertext">3 / 7</div>
   <img src="dag1.jpg" class='imgg'>
   <div class="text">DAG, ES II</div>
 </div>
 
 <div class="mySlides1 fade">
-  <div class="numbertext">3 / 6</div>
+  <div class="numbertext">4 / 7</div>
   <img src="dag2.jpg" class='imgg'>
   <div class="text">DAG SGS II</div>
 </div>
 
 <div class="mySlides1 fade">
-  <div class="numbertext">4 / 6</div>
+  <div class="numbertext">5 / 7</div>
   <img src="dag3.jpg" class='imgg'>
   <div class="text">DAG LBA</div>
 </div>
 
 <div class="mySlides1 fade">
-  <div class="numbertext">5 / 6</div>
+  <div class="numbertext">6 / 7</div>
   <img src="dag4.jpg" class='imgg'>
   <div class="text">DAG ADMIN</div>
 </div>
 
 <div class="mySlides1 fade">
-  <div class="numbertext">6 /6</div>
+  <div class="numbertext">7 /7</div>
   <img src="dag5.jpg" class='imgg'>
   <div class="text">DAG SGS III</div>
 </div>
@@ -282,6 +288,7 @@ function showSlides() {
 <br>
 
 <div style="text-align:center">
+  <span class="dot1"></span> 
   <span class="dot1"></span> 
   <span class="dot1"></span> 
   <span class="dot1"></span> 
@@ -300,22 +307,28 @@ function load_pagez(pgind)
 var slideIndex1 = 0;
 showSlides1();
 
-function showSlides1() {
-    var i;
-    var slides1 = document.getElementsByClassName("mySlides1");
-    var dots1 = document.getElementsByClassName("dot1");
-    for (i = 0; i < slides1.length; i++) {
-       slides1[i].style.display = "none";  
-    }
-    slideIndex1++;
-    if (slideIndex1 > slides1.length) {slideIndex1 = 1}    
-    for (i = 0; i < dots1.length; i++) {
-        dots1[i].className = dots1[i].className.replace(" active", "");
-    }
-    slides1[slideIndex1-1].style.display = "block";  
-    dots1[slideIndex1-1].className += " active";
-    setTimeout(showSlides1, 6000); // Change image every 2 seconds
-}
+function showSlides1() 
+		{
+    	var i;
+    	var slides1 = document.getElementsByClassName("mySlides1");
+    	var dots1 = document.getElementsByClassName("dot1");
+    	for (i = 0; i < slides1.length; i++) 
+    		{
+       		slides1[i].style.display = "none";  
+    		}
+    	slideIndex1++;
+    	if (slideIndex1 > slides1.length) 
+    		{
+    		slideIndex1 = 1;
+    		}    
+    	for (i = 0; i < dots1.length; i++) 
+    		{
+        	dots1[i].className = dots1[i].className.replace(" active", "");
+    		}
+    	slides1[slideIndex1-1].style.display = "block";  
+    	dots1[slideIndex1-1].className += " active";
+    	setTimeout(showSlides1, 6000); // Change image every 2 seconds
+		}
 </script>
  </td> 	
  </tr>
@@ -329,55 +342,32 @@ function showSlides1() {
  </tr>
 
  <tr>
- <td style="text-align: center;"> <button type='button' onclick="load_pagez('neweng')">English</button></td>  	
- <td style="text-align: center;"> <button type='button' onclick="load_pagez('newhin')">Hindi</button></td> 
- <td style="text-align: center;"> <button type='button' onclick="load_pagez('newmal')">Malayalam</button></td> 
- <td style="text-align: center;"> <button type='button' onclick="load_pagez('newtam')">Tamil</button></td>
+ <td style="text-align: center;width: 25%;"> <button type='button' 
+                                          style="cursor:pointer;background-color: #80ced6;color:white;font-weight: bold;" 
+                                          onclick="load_pagez('neweng')">English</button>
+ </td>  	
+ <td style="text-align: center;width: 25%;"> <button type='button'  style="cursor:pointer;"
+                                          onclick="load_pagez('newhin')">Hindi</button>
+ </td> 
+ <td style="text-align: center;width: 25%;"> <button type='button' onclick="load_pagez('newmal')" style="cursor:pointer;">Malayalam</button></td> 
+ <td style="text-align: center;width: 25%;"> <button type='button' onclick="load_pagez('newtam')" style="cursor:pointer;">Tamil</button></td>
  </tr>
+ 
  <tr>
  <td colspan=2 class='padded'> 
  <pre>
- DUMMY CONTENT TO BE REMOVED LATER!!!!!!!!!!!
- <U>POEM BY FROST</U>
- Whose woods these are I think I know.   
-His house is in the village though;   
-He will not see me stopping here   
-To watch his woods fill up with snow.   
-
-My little horse must think it queer   
-To stop without a farmhouse near   
-Between the woods and frozen lake   
-The darkest evening of the year.   
-
-He gives his harness bells a shake   
-To ask if there is some mistake.   
-The only other sound’s the sweep   
-Of easy wind and downy flake.   
-
-The woods are lovely, dark and deep,   
-But I have promises to keep,   
-And miles to go before I sleep,   
-And miles to go before I sleep.
+ 
+ Welcome to the Intranet at the Office of the
+ Accountant General (GSSA), Kerala.
+ Users can hover the mouse over the menu buttons
+ above to get dropdown lists of menus available
 </pre>
  </td>
  <td colspan=2 class='padded'>  
  <pre>
- DUMMY CONTENT TO BE REMOVED LATER!!!!!!!!!!!
- <U>POEM BY LONGFELLOW</U>
-I shot an arrow into the air, 
-It fell to earth, I knew not where; 
-For, so swiftly it flew, the sight 
-Could not follow it in its flight. 
 
-I breathed a song into the air, 
-It fell to earth, I knew not where; 
-For who has sight so keen and strong, 
-That it can follow the flight of song? 
-
-Long, long afterward, in an oak 
-I found the arrow, still unbroke; 
-And the song, from beginning to end, 
-I found again in the heart of a friend. 
+All functionalities relating to Admin Wizard 
+comes under the tab Admin Wizard 
 </pre>
  </td>
  </tr>
@@ -385,46 +375,14 @@ I found again in the heart of a friend.
  <tr>
  <td colspan=2 class='padded'>  
  <pre>
- DUMMY CONTENT TO BE REMOVED LATER!!!!!!!!!!!
- <U>POEM BY LONGFELLOW</U>
- When the summer fields are mown, 
-When the birds are fledged and flown, 
-      And the dry leaves strew the path; 
-With the falling of the snow, 
-With the cawing of the crow, 
-Once again the fields we mow 
-      And gather in the aftermath. 
-
-Not the sweet, new grass with flowers 
-Is this harvesting of ours; 
-      Not the upland clover bloom; 
-But the rowen mixed with weeds, 
-Tangled tufts from marsh and meads, 
-Where the poppy drops its seeds 
-      In the silence and the gloom. 
+ There is a chat box available under the 
+ misc menu. 
   </pre>
  </td>
  <td colspan=2 class='padded'>  
  <pre>
- DUMMY CONTENT TO BE REMOVED LATER!!!!!!!!!!!
- <U>POEM BY ROSETTI</U>
-My heart is like a singing bird 
-                  Whose nest is in a water'd shoot; 
-My heart is like an apple-tree 
-                  Whose boughs are bent with thickset fruit; 
-My heart is like a rainbow shell 
-                  That paddles in a halcyon sea; 
-My heart is gladder than all these 
-                  Because my love is come to me. 
-
-Raise me a dais of silk and down; 
-                  Hang it with vair and purple dyes; 
-Carve it in doves and pomegranates, 
-                  And peacocks with a hundred eyes; 
-Work it in gold and silver grapes, 
-                  In leaves and silver fleurs-de-lys; 
-Because the birthday of my life 
-                  Is come, my love is come to me. 
+ The intranet also comes with its own mail box under 
+ the misc tab
   </pre>
  </td>
  </tr>

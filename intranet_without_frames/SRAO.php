@@ -106,7 +106,7 @@ $(document).ready(
 
 		
 		$query="select  a.ps_nm DAG,a.branch branch,
-		                b.ps_nm reporting_officer,b.cadre designation,b.section section,
+		                b.ps_nm reporting_officer,b.cadre designation,b.section section,b.ps_idn ppid,
 		                decode(b.dec,'HQ','Hqrs','Field') hq,b.ps_idn idemp
 		                from
                             (select ps_nm,ps_brnch_id,brn.dmn_dscrptn branch,
@@ -117,14 +117,16 @@ $(document).ready(
 									ps_cdr_id in ('DA00','DA01','DA02','DA04','DA05','DA07','DA08')
 							) a,
 							(select ps_nm,ps_brnch_id,cdr.dmn_dscrptn cadre,sec.dmn_dscrptn section,
-							        ps_cdr_id,sec.dmn_shrt_nm dec,ps_idn
+							        ps_cdr_id,sec.dmn_shrt_nm dec,ps_idn,nvl(p_s,9999) sr_snrty
 									from 
-									prsnl_infrmtn_systm,estt_dmn_mstr cdr,estt_dmn_mstr sec
+									prsnl_infrmtn_systm,estt_dmn_mstr cdr,estt_dmn_mstr sec,
+									(select ps_idn pdd,pbr_snrty p_s from KER_BILLS_PERS_INF) kb
 									where cdr.dmn_id(+)=ps_cdr_id and sec.dmn_id(+)=ps_sctn_id and 
-									ps_flg='W' and ps_cdr_id in ('DB01','DB03','DB04','DB06','DB02','DB05')
+									ps_flg='W' --and ps_cdr_id in ('DB01','DB03','DB04','DB06','DB02','DB05') 
+									and pdd(+)=ps_idn
 							) b
 						where a.ps_brnch_id=b.ps_brnch_id(+) and a.ps_wing like ('$wing') and a.ps_brnch_id like '$bran' 
-						order by a.ps_wing,a.ps_cdr_id,a.ps_brnch_id,b.ps_cdr_id,decode(b.dec,'HQ','Hqrs','Field')";
+						order by b.ps_cdr_id,b.sr_snrty,a.ps_wing,a.ps_brnch_id,b.ps_cdr_id,decode(b.dec,'HQ','Hqrs','Field')";
 		store2debug($query);
 		$statemen=oci_parse($conn,$query);
 		oci_execute($statemen);
@@ -143,11 +145,12 @@ $(document).ready(
 				$desig=$row["DESIGNATION"];
 				$section=$row["SECTION"];
 				$hq=$row["HQ"];
+				$ppid=$row["PPID"];
 				echo "<tr>";
 				echo "<td>$dag</td>";
 				echo "<td>$branch</td>";
 				echo "<td>$cnt.$officer</td>";
-				echo "<td><img src='..\ag\photo_cag\\".$empid.".jpg' alt='no photo' style='width:100px;height:122px;'></td>";
+				echo "<td><a href='http://10.53.214.109:8012/intranett/intranet_without_frames/ag/empdb.php?specuser=$ppid'><img src='..\ag\photo_cag\\".$empid.".jpg' alt='no photo' style='width:100px;height:122px;'></a></td>";
 				echo "<td>$desig</td>";
 				echo "<td>$section</td>";
 				echo "<td>$hq</td>";

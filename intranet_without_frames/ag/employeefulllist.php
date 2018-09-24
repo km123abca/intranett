@@ -358,22 +358,22 @@ function vallist(col,elem,opto='no',defval='none')
 	<lab class="flg2 clred"><input  type='checkbox' id='dm' name='dm' value='dm' >DM</lab>
 	<lab class="flg2 clred"><input  type='checkbox' id='ao' name='ao' value='ao' >AO</lab>
 	<lab class="flg2"><input  type='checkbox' id='aoc' name='aoc' value='aoc' >AO(c)</lab>
-	<lab class="flg2"><input  type='checkbox' id='saol' name='saol' value='saol' >SrAO(L)</lab>
-	<lab class="flg2"><input  type='checkbox' id='sps' name='sps' value='sps' >SrPS</lab>
-	<lab class="flg2"><input  type='checkbox' id='sdp' name='sdp' value='sdp' >SrDP</lab>
+	<lab class="flg2 clred"><input  type='checkbox' id='saol' name='saol' value='saol' >SrAO(L)</lab>
+	<lab class="flg2 clred"><input  type='checkbox' id='sps' name='sps' value='sps' >SrPS</lab>
+	<lab class="flg2 clred"><input  type='checkbox' id='sdp' name='sdp' value='sdp' >SrDP</lab>
 	<lab class="flg2"><input  type='checkbox' id='ho' name='ho' value='ho' >HO</lab>
-	<lab class="flg2"><input  type='checkbox' id='aao' name='aao' value='aao' >AAO</lab>
-	<lab class="flg2"><input  type='checkbox' id='dp' name='dp' value='dp' >DP</lab>
-	<lab class="flg2"><input  type='checkbox' id='psec' name='psec' value='psec' >PS</lab>
+	<lab class="flg2 clred"><input  type='checkbox' id='aao' name='aao' value='aao' >AAO</lab>
+	<lab class="flg2 clred"><input  type='checkbox' id='dp' name='dp' value='dp' >DP</lab>
+	<lab class="flg2 clred"><input  type='checkbox' id='psec' name='psec' value='psec' >PS</lab>
 	<lab class="flg2"><input  type='checkbox' id='aao' name='aao' value='aao' >AAO(c)</lab>
 	<lab class="flg2"><input  type='checkbox' id='so' name='so' value='so' >SO</lab>
 	<lab class="flg2"><input  type='checkbox' id='aso' name='aso' value='aso' >SO(adhoc)</lab>
 	<lab class="flg2"><input  type='checkbox' id='soc' name='soc' value='soc' >SO(c)</lab>
-	<lab class="flg2"><input  type='checkbox' id='spv' name='spv' value='spv' >Supr</lab>
-	<lab class="flg2"><input  type='checkbox' id='wa' name='wa' value='wa' >WelfAsst</lab>
+	<lab class="flg2 clred"><input  type='checkbox' id='spv' name='spv' value='spv' >Supr</lab>
+	<lab class="flg2 clred"><input  type='checkbox' id='wa' name='wa' value='wa' >WelfAsst</lab>
 	<lab class="flg2"><input  type='checkbox' id='sht' name='sht' value='sht' >SenHT</lab>
-	<lab class="flg2"><input  type='checkbox' id='sgi' name='sgi' value='sgi' >Steno(GrI)</lab>
-	<lab class="flg2"><input  type='checkbox' id='deod' name='deod' value='deod' >DEO(GrD)</lab>
+	<lab class="flg2 clred"><input  type='checkbox' id='sgi' name='sgi' value='sgi' >Steno(GrI)</lab>
+	<lab class="flg2 clred"><input  type='checkbox' id='deod' name='deod' value='deod' >DEO(GrD)</lab>
 
 
 	<lab class="flg2"><input  type='checkbox' id='saodep' name='saodep' value='saodep' >SrAO(dep)</lab>
@@ -389,16 +389,16 @@ function vallist(col,elem,opto='no',defval='none')
 	<lab class="flg2"><input  type='checkbox' id='rcas' name='rcas' value='rcas' >RCA</lab>
 	<lab class="flg2"><input  type='checkbox' id='iao' name='iao' value='iao' >IAO</lab>
 	<lab class="flg2"><input  type='checkbox' id='sgid' name='sgid' value='sgid' >SG(GrI)(dep)</lab>
-	<lab class="flg2"><input  type='checkbox' id='aaol' name='aaol' value='aaol' >AAO(L)</lab>
-	<lab class="flg2"><input  type='checkbox' id='sradr' name='sradr' value='sradr' >SrAdr</lab>
+	<lab class="flg2 clred"><input  type='checkbox' id='aaol' name='aaol' value='aaol' >AAO(L)</lab>
+	<lab class="flg2 clred"><input  type='checkbox' id='sradr' name='sradr' value='sradr' >SrAdr</lab>
 	<lab class="flg2"><input  type='checkbox' id='pa' name='pa' value='pa' >PA</lab>
 	<lab class="flg2"><input  type='checkbox' id='jht' name='jht' value='jht' >JHT</lab>
-	<lab class="flg2"><input  type='checkbox' id='adr' name='adr' value='adr' >Adr</lab>
+	<lab class="flg2 clred"><input  type='checkbox' id='adr' name='adr' value='adr' >Adr</lab>
 	<lab class="flg2"><input  type='checkbox' id='sgiid' name='sgiid' value='sgiid' >SG(GrII)(dep)</lab>
-	<lab class="flg2"><input  type='checkbox' id='deoa' name='deoa' value='deoa' >DEO(GrA)</lab>
+	<lab class="flg2 clred"><input  type='checkbox' id='deoa' name='deoa' value='deoa' >DEO(GrA)</lab>
 	<lab class="flg2"><input  type='checkbox' id='deodep' name='deodep' value='deodep' >DEO(dep)</lab>
 	<lab class="flg2"><input  type='checkbox' id='acr' name='acr' value='acr' >AsstCareTkr</lab>
-	<lab class="flg2"><input  type='checkbox' id='clrk' name='clrk' value='clrk' >Clerk</lab>
+	<lab class="flg2 clred"><input  type='checkbox' id='clrk' name='clrk' value='clrk' >Clerk</lab>
 	<lab class="flg2"><input  type='checkbox' id='scd' name='scd' value='scd' >StfCarDr</lab>
 	<lab class="flg2"><input  type='checkbox' id='sgii' name='sgii' value='sgii' >SG(GrII)</lab>
 	<lab class="flg2"><input  type='checkbox' id='deoad' name='deoad' value='deoad' >DEO(GrA)(d)</lab>
@@ -414,7 +414,7 @@ function vallist(col,elem,opto='no',defval='none')
 </fieldset>
 <input type="submit" name="generate" id="subut" class="floatlef">
 <button type="button" onclick="makeinviz()" class="floatlef">hide</button>
-<a href="index.php" class="floatlef">back to main menu</a>
+<a href="empreports.php" class="floatlef">back to main menu</a>
 </form>
 
 <a href="employeefulllist.php" id="lifeline">Back</a>

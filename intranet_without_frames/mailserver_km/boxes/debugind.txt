@@ -318,3 +318,24 @@ Tester file:inbox1.txt
 Since tester and active are equal ,will stop here       
 km found and current count:4         
 Now reached count no:4 which is located at 4 of inbox1.txt       
+column:3 of km's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+km found and current count:0         
+km found and current count:1         
+km found and current count:2         
+km found and current count:3         
+Now reached count no:3 which is located at 5 of inbox.txt       
+column:0 of ags's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox1.txt    
+Tester file:inbox.txt    
+ags found and current count:0         
+Now reached count no:0 which is located at 0 of inbox.txt       
+column:0 of ags's iboxabout to be searched  
+The Search Parameters, index:0 and file name:inbox    
+Current active file:inbox2.txt    
+Tester file:inbox.txt    
+ags found and current count:0         
+Now reached count no:0 which is located at 0 of inbox.txt       

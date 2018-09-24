@@ -1,9 +1,11 @@
 <head>
-
+<?php
+//include_once('../iwfheader.php');
+?>
 	<script>
 	function redirect()
 		{
-    window.location.href="index.php";
+    window.location.href="empdb.php";
 		}
 	</script>
 	<style>
@@ -31,6 +33,7 @@
 </head>
 
 <body>
+
      <box1 id="mm">
     <b1 id="mess">You dont have sufficient privileges to view the page you clicked on</b1><br>
 	<button type="button" onclick="redirect()">Back to where I came from</button>

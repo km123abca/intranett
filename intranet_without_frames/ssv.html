@@ -1,0 +1,147 @@
+<head>
+</head>
+
+
+<body>
+<canvas style='border:3px solid red;'>
+  
+</canvas>
+	<script>
+
+      function adjx(xpos)
+        {
+          if (xpos < 5 || xpos > canvas.width - 5)  return -1;
+          return 1;
+        }
+        function adjy(ypos)
+        {
+          if (ypos < 5 || ypos > canvas.height - 5)   return -1;
+          return 1;
+        }
+
+         function ind_adjy(ypos)
+        {
+          if (ypos < 7 )   return 6;
+          if (ypos > canvas.height - 5)   return (canvas.height - 5);
+          return ypos;
+        }
+
+
+			var canvas = document.querySelector('canvas'),
+    		ctx = canvas.getContext('2d');
+
+      function transx(xpos)
+        {
+          var xcentre=canvas.width/2;
+          return xpos-xcentre;
+        }
+
+      function transy(ypos)
+        {
+          var ycentre=canvas.height/2;
+          return ypos-ycentre;
+        }
+
+      function retransx(xpos)
+        {
+          var xcentre=canvas.width/2;
+          return xpos+xcentre;
+        }
+
+      function retransy(ypos)
+        {
+          var ycentre=canvas.height/2;
+          return ypos+ycentre;
+        }
+
+			var resize = function () {
+  									canvas.width = window.innerWidth-35;
+  									canvas.height = window.innerHeight-100;
+									 };
+			window.addEventListener('resize', resize);
+			window.addEventListener('load', function () {
+														  resize();
+	  													  var pos, vel,pos2,vel2;
+
+  														   pos = {x: 10, y: 10};
+  														   vel = {x: 6,y: 6};
+
+                                 pos2 = {x: canvas.width - 5,y: 10};
+                                 vel2 = {x: -6,y: 6};
+
+                                 pos3 = {x: 10,y: canvas.height - 5};
+                                 vel3 = {x: -6,y: 6};
+
+                                 pos4 = {x: 10, y: 10};
+                                 vel4 = {x: 6,y: 6};
+
+                                 posx=700;
+                                 velx=6;
+                                 dircha=1;
+
+  			var loop = function () {
+    								ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    //ctx.ellipse(100,100,100,100,2,3,0.7);
+    								pos.x += vel.x;
+    								pos.y += vel.y;
+                    vel.x *=adjx(pos.x);
+                    vel.y *=adjy(pos.y);
+
+                    pos2.x+=vel2.x;
+                    pos2.y+=vel2.y;
+                    vel2.x *=adjx(pos2.x);
+                    vel2.y *=adjy(pos2.y);
+
+                    pos3.x+=vel3.x;
+                    pos3.y+=vel3.y;     
+                    vel3.x *=adjx(pos3.x);
+                    vel3.y *=adjy(pos3.y);
+
+                    pos4.x+=vel4.x;
+                    vel4.x*=adjx(pos4.x);
+                    pos4.y=ind_adjy(Math.sqrt(4*pos4.x*25));
+
+                    posx+=velx;
+                    trans_x=transx(posx);
+                    //velx*=adjx(posx);
+                    rad=300;
+                    if (Math.abs(trans_x)>rad)  {velx*=-1; dircha*=-1;}
+                    
+                    posy=dircha*Math.sqrt(  rad*rad-trans_x*trans_x  );
+                    posy=Math.floor(posy);
+                    trans_y=posy;
+                    tempy=retransy(posy);
+                    posy=ind_adjy(retransy(posy));
+
+                     cx = document.querySelector('xval');
+                     cy = document.querySelector('yval');
+
+                     cx.innerHTML='actual_xposition:'+posx+'  width centre:'+canvas.width/2+' transformedx='+trans_x;
+                     cy.innerHTML='actual_yposition:'+posy+'  height centre:'+canvas.height/2+' transformedy='+trans_y;
+
+                   
+
+                     ctx.fillStyle="#FF0000";
+    			ctx.fillRect(pos.x - 5, pos.y - 5, 10, 10);
+    			 ctx.fillStyle="#FF00FF";
+                   ctx.fillRect(pos2.x - 5, pos2.y - 5, 10, 10);
+                   ctx.fillStyle="#666600";
+                   ctx.fillRect(pos3.x - 5, pos3.y - 5, 10, 10);
+                    ctx.fillStyle="#3385ff";
+                    ctx.fillRect(pos4.x - 5, pos4.y - 5, 10, 10);
+                    ctx.fillStyle="#00FF00";
+                    ctx.fillRect(posx - 5, posy - 5, 10, 10);
+
+
+  									};
+	  		setInterval(loop, 1000 / 60);
+
+	  		//setInterval(loop, 2000);
+														                        }
+									             );
+
+	</script>
+
+	<xval ></xval><br>
+	<yval></yval>
+</body>

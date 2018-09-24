@@ -129,7 +129,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 <body>
 <?php require_once('../iwfheader.php'); ?>
 <marquee scrolldelay='50' scrollamount='10' truespeed  style='background-color:black;font-size: 36;color:white;font-weight: bold;'  >
-			Welcome to your Mail Box , Kindly Login using your credentials
+			Welcome to your  Mail Box , Kindly Login using your credentials
 			
 			</marquee>
 <div class='logincontainer'>

@@ -3,3 +3,4 @@ test_user#v#admn_gssa#v#gradation list#v#Sir,  zhinyatPFA the gradation list for
 datamanager#v#admn_gssa#v#hello#v#Sir,zhinyatThis is a Test mail from admn#v##v#read
 admin#v#km#v#hey#v#Hi admin,zhinyatTake a look at this image#v#http://10.53.214.109:8012/mailserver_km/uploads/Fhills.jpg#v#read
 km#v#admin#v#hello#v#Hey,zhinyatTake a look#v#http://10.53.214.109:8012/intranett/intranet_without_frames/mailserver_km/uploads/Fhills.jpg#v#read
+ags#v#admn_gssa#v#file to upload#v#Hi,zhinyatPlease upload this deputation notice to our website.#v#http://10.53.214.109:8012/intranett/intranet_without_frames/mailserver_km/uploads/deputation notice no 43.pdf#v#unread

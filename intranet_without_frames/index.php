@@ -108,12 +108,21 @@ body
     }
     #head_div
     {
-    	background-image: url('images/office_merged.jpg'); 
+    	/*background-image: url('images/office_merged.jpg'); */
     	background-repeat: no-repeat;
 		background-size: 100% 150px;
 		width: 100%;
 		height: 150px;
 		padding: none;
+		background-color: #b2e1e6;
+        
+
+		
+    }
+    .sticky
+    {
+    	position:fixed;
+    	top:0;
     }
 
 </style>
@@ -175,11 +184,12 @@ body
  <button class="dropbtn" onclick="load_pagez('hom')">Group Officers (GSSA)</button>
   
     <div class="dropdown-content" style="min-width: 220px;">
-
+    <!--
     <button type="button"   class="ddbutton" onclick="load_pagez('aggssa')">
     Accountant General (GSSA)
-    </button>   
- 
+    </button>  
+    commented to remove AG from group officers list 
+    -->
 
     <button type="button"   class="ddbutton" onclick="load_pagez('admin_dag')">
     DAG (Admin)
@@ -208,11 +218,12 @@ body
  <button class="dropbtn" onclick="load_pagez('hom')"> Group Officers (ERSA)</button>
   
     <div class="dropdown-content" style="min-width: 220px;">
-
+   <!--
     <button type="button"   class="ddbutton"  onclick="load_pagez('agersa')" >
     Accountant General (ERSA)
     </button>
-
+    commented to remove AG from group offices
+    -->
     
     <button type="button"   class="ddbutton" onclick="load_pagez('ars_dag')">
     DAG,Admin and RS 
@@ -277,7 +288,7 @@ body
   <button class="dropbtn"> Misc</button>
   <div class="dropdown-content">
 
-    <button type="button"  class="ddbutton" onclick="load_pagez('chat')">
+    <button type="button"  class="ddbutton" onclick="load_pageznorm('chatgyc/')">
     Chat with colleagues
     </button>
 
@@ -302,6 +313,13 @@ body
 
   </div>
 </div>
+<br><br><br>
+
+
+<marquee scrolldelay='50' scrollamount='10' truespeed  style='background-color:black;font-size: 36;color:white;font-weight: bold;'  >
+			OFFICES OF THE ACCOUNTANTS GENERAL, KERALA
+			
+			</marquee>
 </div>
 
 
@@ -381,7 +399,7 @@ else if ($pgind=='neweng')
 					{include_once('newseng.php');//ESI_DAG ag/login_frames.php
 					}
 else if ($pgind=='newmal')
-					{include_once('newsmal.php');//ESI_DAG ag/login_frames.php
+					{include_once('newsmal.html');//ESI_DAG ag/login_frames.php
 					}
 else if ($pgind=='newhin')
 					{include_once('daily_H.html');//ESI_DAG ag/login_frames.php
@@ -401,7 +419,21 @@ else
 
 
 
+<script>
+/*
+window.onscroll = function() {myFunction()};
 
+var header = document.getElementById("head_div");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}*/
+</script>
 
 </body>
 

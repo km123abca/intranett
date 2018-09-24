@@ -8,6 +8,12 @@ require_once("./include/membersite_config.php");
 		}
     //include_once('../iwfheader.php');
 
+		if($fgmembersite->Userrole()=='basic')
+			{
+    		$fgmembersite->RedirectToURL("nomansland.php");
+    		exit;
+			}
+
 $conn=oci_connect($fgmembersite->orauser(),$fgmembersite->orap(),$fgmembersite->oraho() );
   	if (!$conn)
 				{echo 'Failed to connect to Oracle';

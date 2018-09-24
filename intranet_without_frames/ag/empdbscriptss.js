@@ -157,8 +157,9 @@ function dbwenn(d2,d1)
 					document.getElementById("offbutton2").click();
 					document.getElementById("offbutton22").click();
 						}
-					function showtabz(tab)
+					function showtabz(tab,loginus='none',curruse='none')
 					    {
+					    	//console.log('present:'+loginus+' and curr:'+curruse);
 					if (tab==1)
 							{
 							hidetabz();
@@ -169,7 +170,7 @@ function dbwenn(d2,d1)
 							hidetabz();
 							document.getElementById("offbutton").click();
 							}
-					else
+					else if(loginus==curruse)
 						    {
 							hidetabz();
 							document.getElementById("offbutton3").click();

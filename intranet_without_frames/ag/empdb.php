@@ -15,10 +15,21 @@ $conn=oci_connect($fgmembersite->orauser(),$fgmembersite->orap(),$fgmembersite->
 				}
 	$current_user=$fgmembersite->Userid();
 	$usertype=$fgmembersite->Userrole();
+
+
+    if (!(isset($_SESSION["y"])))  $_SESSION["y"]=$current_user;//added 21
+	//$cur_us_id_sto=getid($_SESSION['y'],$conn);//added 21
+
+	//$cur_us_id_sto=$current_user;
 ?>
 <head>
 <script src="empdbscriptss.js"></script>
 <style>
+
+#offbutton,#offbutton0,#offbutton3
+{
+	display:none;
+}
 
 .dropdown 
 	{
@@ -579,7 +590,10 @@ $conn=oci_connect($fgmembersite->orauser(),$fgmembersite->orap(),$fgmembersite->
   <div class="dropdown-content">
     <button type="button" id="bx1" class="ddbutton" onclick="showtabz(1)">biodata</button>
     <button type="button" id="bx2" class="ddbutton" onclick="showtabz(2)">Office details</button>
-    <button type="button" id="bx3" class="ddbutton" onclick="showtabz(3)">Pay details</button>
+    <!--
+    <button type="button" id="bx3" class="ddbutton"   onclick="showtabz(3,<?php  echo "'$current_user','$cur_us_id_sto'";?>)">Pay details</button>
+    -->
+     <button type="button" id="bx3" class="ddbutton"  >Pay details</button>
   </div>
 </div>
 
@@ -709,7 +723,7 @@ $conn=oci_connect($fgmembersite->orauser(),$fgmembersite->orap(),$fgmembersite->
 <inp class="plg pmd psm">:<input type="text" name="name" id="name" class="inp"></inp>
 -->
 
-<t3 class="plg pmd psm"><f>KLTVA Number</f></t3>
+<t3 class="plg pmd psm"><f>Employee ID</f></t3>
 <inp class="plg pmd psm">:<input type="text" name="kltva" id="kltva" class="inp"></inp>
 <t3 class="plg pmd psm"><f>PAN Number</f></t3>
 <inp class="plg pmd psm">:<input type="text" name="panno" id="panno" class="inp"></inp>
@@ -984,6 +998,9 @@ if ($go_ahead==1)
 		     	$name=$_SESSION["z"];
 		     else
 		     {
+		     	if (isset($_REQUEST['specuser']))
+		     		$temp_var=$_REQUEST['specuser'];
+		     	else
 		     	$temp_var=$current_user;
 		     	if (array_key_exists($temp_var,$privarray)) $temp_var=$privarray[$temp_var];
 		     	$name=getnmx($temp_var,$conn);
@@ -1233,6 +1250,7 @@ if ($go_ahead==1)
 				       if ($_SESSION["x"]==$num)
 						 {
 							 $_SESSION["y"]=$row["PS_NM"];
+
 					    $cadre=$row["PS_CDR_ID"];
 						$wing=$row["PS_WING"];
 						$section=$row["PS_SCTN_ID"];
@@ -1272,6 +1290,8 @@ if ($go_ahead==1)
 						$bnk=$row["PS_BNK_NM"];
 						$mobl=$row["PS_MOBILE_NO"];
 						$_SESSION["per"]=$row["PS_IDN"];
+
+						//$cur_us_id_sto=$row["PS_IDN"]; This was unnecessary
 						
 						 echo  '
 						 <script>
@@ -1583,6 +1603,12 @@ function descr($dmnid,$conn)
 	    }
 	
 */
+	    $cur_us_id_sto=getid($_SESSION['y'],$conn);
 ?>
 
+
+
+<script>
+document.getElementById('bx3').addEventListener('click',function(){      showtabz(3,<?php  echo "'$current_user','$cur_us_id_sto'";?>);     });
+</script>
 </body>

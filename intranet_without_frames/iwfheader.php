@@ -138,6 +138,14 @@ body
 		width: 100%;
 		height: 150px;
 		padding: none;
+		/*position: sticky;
+		clear:both;
+		z-index: 1;*/
+    }
+     .sticky
+    {
+    	position:fixed;
+    	top:0;
     }
 
 </style>
@@ -381,7 +389,21 @@ else if ($pgind=='ESII_DAG')
 
 
 
+<script>
 
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("head_div");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
 
 
 

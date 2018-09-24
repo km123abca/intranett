@@ -5,6 +5,14 @@
     		$fgmembersite->RedirectToURL("login_frames.php");
     		exit;
 			}
+
+      
+        if($fgmembersite->Userrole()=='basic')
+			{
+    		$fgmembersite->RedirectToURL("nomansland.php");
+    		exit;
+			}
+
 			include_once('../iwfheader.php');
 		$conn=oci_connect($fgmembersite->orauser(),$fgmembersite->orap(),$fgmembersite->oraho() );
   		if (!$conn)

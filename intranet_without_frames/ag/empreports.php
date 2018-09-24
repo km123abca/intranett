@@ -537,7 +537,11 @@ require_once("./include/membersite_config.php");
 						float:left;
 						width:25%;
 						}
-
+                        .dropbtnx:hover
+                        {
+                        cursor: pointer;
+                        background-color:  #65c3cd;
+                        }
 
 </style>
 

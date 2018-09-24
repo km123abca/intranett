@@ -24,7 +24,9 @@
 	
 	</script>
 </head>
-
+<?php
+include_once('phpfuncs.php');
+?>
 
 <body>
 
@@ -36,7 +38,10 @@
 	<!--		<li><button type='button' class='spec' onclick="changevisb('composebox','on')" ><u>Compose</u></button> </li>    -->
 			<li><a href="javascript:changevisb('composebox','on')">Compose</a> </li>
 			<li><a href="javascript:logout()">logout</a> </li>
-			<li><a href="populatelogin.php">Add new</a> </li>
+			<?php
+			if (current_user()=='ags')
+			echo "<li><a href='populatelogin.php'>Add new</a> </li>";
+			?>
 		</ul>
 	</div>
 
