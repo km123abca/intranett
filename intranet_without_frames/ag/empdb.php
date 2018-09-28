@@ -7,7 +7,7 @@ require_once("./include/membersite_config.php");
     exit;
 		}
 		//require_once('../iwfheader.php');
-$privarray=array('ag'=>'9023','dag_admin'=>'9022','dag_sgs2'=>'9025','dag_sgs3'=>'9020','dag_lba'=>'9019');
+$privarray=array('ag'=>'9023','dag_admin'=>'9022','dag_sgs2'=>'9025','dag_sgs3'=>'9027','dag_lba'=>'9020');
 $conn=oci_connect($fgmembersite->orauser(),$fgmembersite->orap(),$fgmembersite->oraho() );
   	if (!$conn)
 				{echo 'Failed to connect to Oracle';
@@ -632,6 +632,7 @@ $conn=oci_connect($fgmembersite->orauser(),$fgmembersite->orap(),$fgmembersite->
             $_SESSION["cat"]=test_input($_POST["cat"]);
             $_SESSION["edqual"]=test_input($_POST["edqual"]);
             $_SESSION["wonw"]=test_input($_POST["wonw"]);
+            $_SESSION['dfp_']=test_input($_POST["dfp"]);
 
             
 					}
@@ -654,6 +655,8 @@ $conn=oci_connect($fgmembersite->orauser(),$fgmembersite->orap(),$fgmembersite->
 <button type="button" class='maindbbutton' onclick="clrdets()">clear</button>
 <input type="submit" name="maindbsub" value="Search" id="maindbsub" 
         class='maindbbutton'> 
+ <button type="button" class='maindbbutton' onclick="window.location.href='empdb.php';">Go to my Page</button>
+ <button type="button" id='peeps' class='maindbbutton' >People</button>
  <a href='logout.php' class='hovop'> <f><img src='images\logoutt.jpg' alt='logout' style="width:111px;height:48px;float:right;"></f></a>
 
 
@@ -869,7 +872,7 @@ $conn=oci_connect($fgmembersite->orauser(),$fgmembersite->orap(),$fgmembersite->
 <t43 class="plg pmd psm"><f>Deputation Designation</f></t43>
 <inp class="plg pmd psm">:<input type="text" name="depdes" id="depdes" class="inp" size="40" ></inp>
 
-<t43 class="plg pmd psm"><f>Deputation From</f></t43>
+<t43 class="plg pmd psm"><f>Basic Pay</f></t43>
 <inp class="plg pmd psm">:<input type="text" name="dfp" id="dfp" class="inp" size="40" ></inp>
 
 
@@ -922,6 +925,9 @@ $conn=oci_connect($fgmembersite->orauser(),$fgmembersite->orap(),$fgmembersite->
 
 <bnk  class="lg md sm">Bank Name</bnk>
 <inp  class="lg md sm">:<input type="text" name="bnk" id="bnk" size="20" class="inp"></inp>
+
+<bnk  class="lg md sm">PAN</bnk>
+<inp  class="lg md sm">:<input type="text" name="panno2" id="panno2" size="20" class="inp"></inp>
 
 
 
@@ -1025,6 +1031,7 @@ if ($go_ahead==1)
 				//Access analysis: generating the subquery for access control
 			$query="select a.* from access_mazter a,role_mazter 
 			        where a.idno=role and usr='$current_user'";
+			        //store2db($query);
 			$statemen=oci_parse($conn,$query);
 	        oci_execute($statemen);
 	        if( $row=oci_fetch_array($statemen))
@@ -1035,28 +1042,30 @@ if ($go_ahead==1)
 	        $asections=$row['SECTIONN'];
 	        $ids=$row['IDS'];
 	        //if  ($row["IDNO"]=='basic') $ids=$current_user;
-	        $subquery="and ( ";
+
+	        $subquery=" and ( ";
 	        foreach(explode(',',$awings) as $awing)
 	        		{
-            $subquery.=" ps_wing like '$awing' or";
+            $subquery.=" ps_wing like '$awing' or ";
 	        		}
-	        $subquery=substr($subquery, 0,-2).") and (";
+	        $subquery=substr($subquery, 0,-3).") and (";
 	        foreach(explode(',',$ids) as $aid)
 	        		{
-            $subquery.="ps_idn like '$aid' or";
+            $subquery.="ps_idn like '$aid' or ";
 	        		}
-	        $subquery=substr($subquery, 0,-2).") and (";
+	        $subquery=substr($subquery, 0,-3).") and (";
 	        foreach(explode(',',$abranches) as $abranch)
 	        		{
-            $subquery.="ps_brnch_id like '$abranch' or";
+            $subquery.="ps_brnch_id like '$abranch' or ";
 	        		}
-            $subquery=substr($subquery, 0,-2).") and (";
+            $subquery=substr($subquery, 0,-3).") and (";
 	        foreach(explode(',',$asections) as $asection)
 	        		{
-            $subquery.="ps_sctn_id like '$asection' or";
+            $subquery.="ps_sctn_id like '$asection' or ";
 	        		}
-	        $subquery=substr($subquery, 0,-2).")";
+	        $subquery=substr($subquery, 0,-3).")";
 	        //echo $subquery;
+	        //store2db($subquery);
 	            }
 	        else
 	        	{//echo 'no access';
@@ -1065,6 +1074,7 @@ if ($go_ahead==1)
 	             die('<br><warn> You have no role defined, hence you cant search</warn><br>');
 	             }
 	         //Access analysis
+	             //store2db($subquery);
 	        $searchcrt='';
 		if (($_SERVER["REQUEST_METHOD"] == "POST") &&(array_key_exists('name',$_POST)))
 		{
@@ -1108,9 +1118,13 @@ if ($go_ahead==1)
 	        $id2search=strtolower($id2search);
 	        $searchcrt.=" and nvl(lower(ps_bldng),'%') like nvl('$id2search','$noval') ";
 
-	          $id2search=$_SESSION["edqual"];
+	        $id2search=$_SESSION["edqual"];
 	        $id2search=strtolower($id2search);
 	        $searchcrt.=" and nvl(lower(PS_EDCTNL_QLFCTN1),'%') like nvl('$id2search','$noval') ";
+
+	        $id2search=$_SESSION["dfp_"];
+	        $id2search=strtolower($id2search);
+	        $searchcrt.=" and nvl(lower(PS_PCA_BSC_JAN06),'%') like nvl('$id2search','$noval') ";
 
 	        $id2search=$_SESSION["wonw"];
 	        //$id2search=$id2search."%";
@@ -1127,7 +1141,8 @@ if ($go_ahead==1)
 	       // echo "<script>alert('".  $id2search."')</script>";
 	       $id2search=strtolower($id2search);
 	        $searchcrt.=" and nvl(lower(PS_FLG),'%') like nvl('$id2search','$noval') ";
-		}	
+		}
+
 				/**/
 			
 			$query = "SELECT ps_nm,
@@ -1144,7 +1159,7 @@ if ($go_ahead==1)
   			                 ps_wing,
   			                 ps_sctn_id,
   			                 ps_brnch_id,
-  			                 ps_pca_bsc_jan06,
+  			                 ps_pca_bsc_jan06 ,
   			                 er_da,
   			                 er_ca,
   			                 er_cca,
@@ -1217,13 +1232,13 @@ if ($go_ahead==1)
   			           			er_mnth_of_acnt in	 (select max(er_mnth_of_acnt) from clms_erng_yrfl)
   			           						     ) aa
   			            where 
-  			            	 er_idn(+)=ps_idn and  
+  			            	 er_idn(+)=ps_idn  and  
   			            	 lower(ps_nm) 
 						like '".strtolower($name)."%'".$searchcrt.$subquery
 						."order by ps_cdr_id desc";
 						   
 			 
-						   
+			store2db($query);			   
 						   
 			//echo $query;			   
 			 echo "<br>";
@@ -1346,6 +1361,9 @@ if ($go_ahead==1)
 						 echo 'document.getElementById("panno").value=\''.$pan_no.'\'';
 					     echo '</script>';
 					     echo '<script>';
+						 echo 'document.getElementById("panno2").value=\''.$pan_no.'\'';
+					     echo '</script>';
+					     echo '<script>';
 						 echo 'document.getElementById("mobl").value=\''.$mobl.'\'';
 					     echo '</script>';
 						 echo '<script>';
@@ -1379,7 +1397,7 @@ if ($go_ahead==1)
 						 echo '</script>';
 
 						 echo '<script>';
-						 echo 'document.getElementById("dfp").value=\''.descr($dfp,$conn).'\'';
+						 echo 'document.getElementById("dfp").value=\''.$row["PS_PCA_BSC_JAN06"].'\'';
 						 echo '</script>';
 
 						 echo '<script>';
@@ -1604,11 +1622,21 @@ function descr($dmnid,$conn)
 	
 */
 	    $cur_us_id_sto=getid($_SESSION['y'],$conn);
+	    if ($usertype=='basic')
+	    	$current_user3='basic';
+	    	else
+	    	$current_user3=$current_user;
+
+	    if (array_key_exists($current_user,$privarray)) 
+	    	$current_user=$privarray[$current_user];
+	    
 ?>
 
 
 
 <script>
 document.getElementById('bx3').addEventListener('click',function(){      showtabz(3,<?php  echo "'$current_user','$cur_us_id_sto'";?>);     });
+
+document.getElementById('peeps').addEventListener('click',function(){     window.location.href='emp_under_me.php?cu='+<?php echo "'$current_user3'";?>;    });
 </script>
 </body>

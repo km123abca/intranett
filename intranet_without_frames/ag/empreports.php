@@ -320,6 +320,7 @@ require_once("./include/membersite_config.php");
     						min-width: 160px;
     						box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     						z-index: 1;
+
 												}
 
 							.dropdownx-content button {
@@ -542,6 +543,20 @@ require_once("./include/membersite_config.php");
                         cursor: pointer;
                         background-color:  #65c3cd;
                         }
+                        .linknew
+                        {
+                        width:100%;
+                        text-decoration: none;
+                        text-align: left;
+                        color:white;
+                        background-color: black;
+                        float:left;
+                        clear:right;
+                        }
+                        .linknew:hover
+                        {
+                        background-color:#65c3cd; 
+                        }
 
 </style>
 
@@ -556,118 +571,46 @@ require_once("./include/membersite_config.php");
 
 <!--  DROP DOWN NEW                              -->
 
- <div class="dropdownx" style="float:left;width:30%;">
-  <button class="dropbtnx"> Important Reports   </button>
-  <div class="dropdownx-content" style="margin-left:130px">
-  <pre>
-    <a href="employeefulllist.php">All Employee details</a>
- 	<a href="staff2hq.php">Staff Position</a>
- 	<a href="eventreader.php">Important Events</a>
- 	<a href="section_history.php">Section History</a>
- 	<a href="retirement.php">Employees due for retirement</a>  
- 	<a href="sraos.php">Senior AOs /AOs reporting under each group officer</a>
- 	<a href="hqfieldanalydets.php"> HQ Field Analysis (detail)</a>
- 	<a href="malefemale.php"> Male/Female count </a>
- 	<a href="catcount.php"> Category wise count </a>
- 	<a href="promdets.php"> Promotion Details </a>
- 	<a href="leavemonitor.php">  Leave Details of Probationers </a>
- 	<a href="leavemonitor_cadrewise.php">  Leave Details of Probationers, cadrewise </a>
- 	</pre>
+ <div class="dropdownx" style="float:left;width:50%;">
+  <button class="dropbtnx"> Staff Position Reports   </button>
+  <div class="dropdownx-content" style="margin-left:0px">
+  
+    <a href="employeefulllist.php" class='linknew'>All Employee details</a> 
+    <a href="counter.php" class='linknew'>User Specified Report for employee count</a>
+ 	<a href="staff2hq.php" class='linknew'>Staff Position</a> 	 	 
+ 	<a href="sraos.php" class='linknew'>Senior AOs /AOs reporting under each group officer</a>
+ 	<a href="sraoscount.php" class='linknew'> No of Senior AOs /AOs reporting under each group officer</a>
+ 	<a href="hqfieldanaly.php" class='linknew'> HQ Field Analysis (count)</a>
+ 	<a href="hqfieldanalydets.php" class='linknew'> HQ Field Analysis (detail)</a>
+ 	<a href="malefemale.php" class='linknew'> Male/Female count </a>
+ 	<a href="catcount.php" class='linknew'> Category wise count </a>
+ 	
+ 	<a href="combinedcadres.php" class='linknew'>Staff Position cadre group wise including deputation</a>
+ 	<a href="combinedcadres_nodepo.php" class='linknew'>Staff Position cadre group wise excluding deputation</a>
+ 	<a href="staff_position.php" class='linknew'>Staff Position Status in GSSA</a>
+ 	<a href="staff_position_ersa.php" class='linknew'>Staff Position Status in ERSA</a>
+ 	<a href="staff_position_pdc.php" class='linknew'>Staff Position Status in PDC</a>
+ 	
+ 	<a href="detailer.php" class='linknew'>User Specified Report for employee details</a>
+ 	<a href='countorarepo_v3.php' class='linknew'>Employee Count</a>
+
   </div>
 </div>
 
- <div class="dropdownx" style="float:left;width:30%;">
-  <button class="dropbtnx"> Staff Position Reports  </button>
-  <div class="dropdownx-content" style="margin-left:130px">
-  <pre>
-    <a href="employeefulllist.php">All Employee details</a>
- 	<a href="staff2hq.php">Staff Position</a>
- 	<a href='countorarepo_v3.php'>Employee Count</a>
- 	<a href="staff_position_ersa.php">Staff Position Status in ERSA</a>
- 	<a href="staff_position_pdc.php">Staff Position Status in PDC</a>
- 	<a href="counter.php">User Specified Report for employee count</a>
- 	<a href="detailer.php">User Specified Report for employee details</a>
- 	<a href="sraos.php">Senior AOs /AOs reporting under each group officer</a>
- 	<a href="sraoscount.php"> No of Senior AOs /AOs reporting under each group officer</a>
- 	<a href="hqfieldanaly.php"> HQ Field Analysis (count)</a>
- 	<a href="hqfieldanalydets.php"> HQ Field Analysis (detail)</a>
- 	<a href="malefemale.php"> Male/Female count </a>
- 	<a href="catcount.php"> Category wise count </a>
- 	</pre>
-  </div>
-</div>
-
- <div class="dropdownx" style="float:left;width:30%;">
-  <button class="dropbtnx"> Reports pertaining to Employee Count  </button>
-  <div class="dropdownx-content"  style="margin-left:100px">
-  <pre>
-    <a href="employeefulllist.php">All Employee details</a>
- 	<a href='countorarepo_v3.php'>Employee Count</a>
- 	<a href="counter.php">User Specified Report for employee count</a>
- 	<a href="sraoscount.php"> No of Senior AOs /AOs reporting under each group officer</a>
- 	<a href="hqfieldanaly.php"> HQ Field Analysis (count)</a>
- 	<a href="malefemale.php"> Male/Female count </a>
- 	<a href="catcount.php"> Category wise count </a>
- 	</pre>
-  </div>
-</div>
-
- <div class="dropdownx" style="float:left;width:30%;">
-  <button class="dropbtnx"> Deputation Reports  </button>
-  <div class="dropdownx-content">
-  <pre>    
- 	<a href="deputFROM.php">Persons who are on deputation from this office</a>
- 	<a href="deputTO.php">Persons who are on deputation in this office</a>
- 	<a href="combinedcadres.php">Staff Position cadre group wise including deputation</a>
- 	</pre>
-  </div>
-</div>
-
- <div class="dropdownx" style="float:left;width:30%;">
-  <button class="dropbtnx"> Misc Reports  </button>
-  <div class="dropdownx-content">
-  <pre>
-   
- 	<a href="eventreader.php">Important Events</a>
- 	<a href="section_history.php">Section History</a>
- 	<a href="retirement.php">Employees due for retirement</a>  
- 	<a href="joiningwise.php">Employees who joined between specific dates</a> 
- 	<a href="malefemale.php"> Male/Female count </a>
- 	<a href="catcount.php"> Category wise count </a>
- 	</pre>
-  </div>
-</div>
-
- <div class="dropdownx" style="float:left;width:30%;">
-  <button class="dropbtnx"> All Reports  </button>
-  <div class="dropdownx-content">
-  <pre>
-    <a href="employeefulllist.php">All Employee details</a>
- 	<a href="staff2hq.php">Staff Position</a>
- 	<a href="deputFROM.php">Persons who are on deputation from this office</a>
- 	<a href="deputTO.php">Persons who are on deputation in this office</a>
- 	<a href="eventreader.php">Important Events</a>
- 	<a href="section_history.php">Section History</a>
- 	<a href='countorarepo_v3.php'>Employee Count</a>
- 	<a href="combinedcadres.php">Staff Position cadre group wise including deputation</a>
- 	<a href="combinedcadres_nodepo.php">Staff Position cadre group wise excluding deputation</a>
- 	<a href="staff_position.php">Staff Position Status in GSSA</a>
- 	<a href="staff_position_ersa.php">Staff Position Status in ERSA</a>
- 	<a href="staff_position_pdc.php">Staff Position Status in PDC</a>
- 	<a href="retirement.php">Employees due for retirement</a>  
- 	<a href="joiningwise.php">Employees who joined between specific dates</a> 
- 	<a href="counter.php">User Specified Report for employee count</a>
- 	<a href="detailer.php">User Specified Report for employee details</a>
- 	<a href="sraos.php">Senior AOs /AOs reporting under each group officer</a>
- 	<a href="sraoscount.php"> No of Senior AOs /AOs reporting under each group officer</a>
- 	<a href="hqfieldanaly.php"> HQ Field Analysis (count)</a>
- 	<a href="hqfieldanalydets.php"> HQ Field Analysis (detail)</a>
- 	<a href="malefemale.php"> Male/Female count </a>
- 	<a href="catcount.php"> Category wise count </a>
- 	<a href="promdets.php"> Promotion Details </a>
- 	<a href="leavemonitor.php">  Leave Details of Probationers </a>
- 	<a href="leavemonitor_cadrewise.php">  Leave Details of Probationers, cadrewise </a>
- 	</pre>
+ <div class="dropdownx" style="float:left;width:50%;">
+  <button class="dropbtnx"> Other Administrative Reports  </button>
+  <div class="dropdownx-content" style="margin-left:0px">
+       	
+ 	<a href="section_history.php" class='linknew'>Section History</a>
+ 	<a href="retirement.php" class='linknew'>Employees due for retirement</a>
+ 	<a href="promdets.php" class='linknew'> Promotion Details </a> 
+ 	<a href="leavemonitor.php" class='linknew'>  Leave Details of Probationers </a>
+ 	<a href="leavemonitor_cadrewise.php" class='linknew'>  Leave Details of Probationers, cadrewise </a>
+ 	<a href="deputFROM.php" class='linknew'>Persons who are on deputation from this office</a>
+ 	<a href="deputTO.php" class='linknew'>Persons who are on deputation in this office</a>
+ 	<a href="combinedcadres.php" class='linknew'>Staff Position cadre group wise including deputation</a>
+ 	<a href="joiningwise.php"  class='linknew'>Employees who joined between specific dates</a> 
+ 	
   </div>
 </div>
 

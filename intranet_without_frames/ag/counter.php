@@ -556,7 +556,7 @@ for( var ind in document.getElementsByName("csel"))
 
 <input type="submit" name="generate" id="subut" class="floatlef">
 <button type="button" onclick="makeinviz()" class="floatlef">hide</button>
-<a href="index.php" class="floatlef">back to main menu</a>
+<a href="empreports.php" class="floatlef">back to main menu</a>
 </form>
 
 <?php
